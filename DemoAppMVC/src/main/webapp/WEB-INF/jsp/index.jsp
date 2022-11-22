@@ -9,17 +9,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet"/>
+<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet" />
 <title>index</title>
 </head>
 <body>
-	<h1>Spring Centurion Hello World!</h1>
-	<a href="hello">hello</a>
-	<spring:message code="lable.firstName"/>
-
-	<div>
-		<img alt="test" src="<c:url value="/images/spqr-gold.jpg"/>">
-	
-	</div>
+	<ul>
+		<c:forEach var="cat" items="${categories}">
+			<li>${cat.id}-${cat.name}</li>
+		</c:forEach>
+	</ul>
 </body>
 </html>
