@@ -16,7 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.centurion.controller" })
+@ComponentScan({ "com.centurion.controller","com.centurion.repository","com.centurion.service" })
 public class WebAplicationContextConfig implements WebMvcConfigurer {
 
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
