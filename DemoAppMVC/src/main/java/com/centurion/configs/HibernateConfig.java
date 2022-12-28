@@ -22,7 +22,6 @@ public class HibernateConfig {
 
 	@Bean
 	public LocalSessionFactoryBean getSessionFactory() {
-
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setPackagesToScan("com.centurion.pojos");
 		sessionFactory.setDataSource(dataSource());
