@@ -13,5 +13,9 @@
       <a class="nav-link" href="#">${cat.name}</a>
     </li>
     </c:forEach>
+    
+    <li class="nav-item">
+      <a class="nav-link" href='<c:url value="cart" />'>Gio hang</a>
+    </li>
   </ul>
 </nav>

@@ -19,6 +19,11 @@
 	<put-attribute name="title" value="Trang chu" />
 	<put-attribute name="content" value="/WEB-INF/jsp/index.jsp" />
 	</definition>
+	
+	<definition name="cart" extends="baseLayout">
+	<put-attribute name="title" value="Trang chu" />
+	<put-attribute name="content" value="/WEB-INF/jsp/cart.jsp" />
+	</definition>
 
 </tiles-definitions>
 
