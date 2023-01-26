@@ -17,6 +17,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
+
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name = "product")
@@ -40,6 +43,17 @@ public class Product implements Serializable {
 	@JoinTable(name = "pro_man", joinColumns = { @JoinColumn(name = "product_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "manufacturer_id") })
 	private Set<Manufacturer> manufacturers;
+	@Transient
+	private MultipartFile file;
+	
+	
+	public MultipartFile getFile() {
+		return file;
+	}
+
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
 
 	public int getId() {
 		return id;
