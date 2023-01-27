@@ -18,6 +18,10 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.web.multipart.MultipartFile;
 
@@ -27,8 +31,11 @@ public class Product implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@Size(min = 5, max = 100, message = "{product.name.lenErr}")
 	private String name;
 	private String description;
+	@Min(value = 10000, message = "{product.price.minErr}" )
+	@Max(value = 10000, message = "{product.price.maxErr}" )
 	private BigDecimal price;
 	private String image;
 	@Column(name = "created_date")
@@ -37,6 +44,7 @@ public class Product implements Serializable {
 	private Boolean active;
 	@ManyToOne
 	@JoinColumn(name = "category_id")
+	@NotNull(message = "{product.category.nullErr}")
 	private Category category;
 	
 	@ManyToMany

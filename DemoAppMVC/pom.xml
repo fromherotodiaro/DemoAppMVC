@@ -102,8 +102,6 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.11.0</version>
 		</dependency>
-
-
 		<!-- https://mvnrepository.com/artifact/com.cloudinary/cloudinary-taglib -->
 		<!-- https://mvnrepository.com/artifact/com.cloudinary/cloudinary-taglib -->
 		<dependency>
@@ -112,8 +110,12 @@
 			<version>1.33.0</version>
 		</dependency>
 
-
-
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-validator -->
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>6.1.1.Final</version>
+		</dependency>
 
 	</dependencies>
 
